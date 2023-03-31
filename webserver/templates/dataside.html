@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		<!--
+			function timedRefresh(timeoutPeriod) {
+				setTimeout("location.reload(true);", timeoutPeriod)
+
+				}
+
+				window.onload = timedRefresh(20000);
+			-->
+	</script>
+	<title>bæredygtig vanding af marker</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+	<style>
+		body {
+			background-color: rgba(1, 108, 162, 0.512);
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Data oversigt</h1>
+		<nav>
+			<ul>
+				<li><a href="index">Start</a></li>
+				<li><a href="dataside">Dataside</a></li>
+				<li><a href="omos">Om os</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<div id="plot">{{ plot|safe }}</div>
+	</main>
+	<footer>
+		<p>&copy; 2023 IoT-2, IT-Teknolog 2.sem</p>
+	</footer>
+    
+</body>
+</html>
